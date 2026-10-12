@@ -1,0 +1,399 @@
+:root {
+  --paper: #f4efe6;
+  --ink: #1f1a17;
+  --muted: #5e564e;
+  --line: #ddd4c6;
+  --accent: #7c3f2d;
+  --measure: 40rem;
+  --wide: 68rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Segoe UI", sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--ink);
+}
+
+a:focus-visible,
+.skip-link:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  background: var(--paper);
+  color: var(--ink);
+  padding: 0.5rem 0.75rem;
+}
+
+.skip-link:focus {
+  top: 0.75rem;
+  z-index: 2;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header-inner,
+.site-main,
+.site-footer {
+  width: min(100% - 2.5rem, var(--wide));
+  margin-inline: auto;
+}
+
+.site-header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  padding: 1.25rem 0;
+}
+
+.site-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--ink);
+  font-family: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: 1.35rem;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
+.site-mark {
+  width: 4.75rem;
+  height: auto;
+}
+
+.home-hero {
+  margin: 0 0 2rem;
+}
+
+.home-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.1rem;
+}
+
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 0.28em;
+}
+
+.site-main {
+  padding: 2.5rem 0 4rem;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 1.25rem 0 2rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+h1,
+.motto,
+.reading h1,
+.work-card h2 {
+  font-family: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h1 {
+  margin: 0 0 0.75rem;
+  font-size: 2.25rem;
+}
+
+.motto {
+  margin: 0;
+  font-size: clamp(1.45rem, 5.6vw, 3.4rem);
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.lede,
+.prose {
+  max-width: 38rem;
+}
+
+.lede {
+  color: var(--muted);
+  font-size: 1.125rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.35rem;
+  color: var(--accent);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.featured {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.work-list {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+}
+
+.work-list li + li {
+  border-top: 1px solid var(--line);
+}
+
+.work-card {
+  padding: 1.35rem 0;
+}
+
+.work-card time,
+.reading-header time {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.work-card h2 {
+  margin: 0.2rem 0 0.45rem;
+  font-size: 1.7rem;
+}
+
+.work-card h2 a {
+  color: var(--ink);
+  text-decoration-color: transparent;
+}
+
+.work-card h2 a:hover {
+  text-decoration-color: var(--accent);
+}
+
+.work-card p {
+  margin: 0;
+  max-width: 40rem;
+  color: var(--muted);
+}
+
+.reading-header h1 {
+  margin-bottom: 0.4rem;
+  font-size: 2.5rem;
+}
+
+.lamina {
+  margin: 2rem 0;
+}
+
+.lamina img {
+  display: block;
+  width: min(100%, 34rem);
+  height: auto;
+  border: 1px solid var(--line);
+}
+
+.poem {
+  max-width: var(--measure);
+  white-space: pre-wrap;
+  font-family: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: 1.2rem;
+  line-height: 1.75;
+}
+
+.signals {
+  margin-top: 2.5rem;
+  max-width: var(--measure);
+}
+
+.signals h2 {
+  margin: 0 0 0.35rem;
+  font-family: Palatino, "Palatino Linotype", Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
+.signals-note {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
+.signal-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  align-items: flex-end;
+}
+
+.signal-choices {
+  display: flex;
+  flex: 1 1 16rem;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.signal-choices legend {
+  width: 100%;
+  padding: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.signal {
+  margin-top: 0;
+  font: inherit;
+  font-size: 0.98rem;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  cursor: pointer;
+}
+
+.signal-count {
+  color: var(--muted);
+}
+
+.signal[aria-pressed="true"] {
+  color: var(--paper);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.signal[aria-pressed="true"] .signal-count {
+  color: var(--paper);
+}
+
+.signal:hover {
+  border-color: var(--accent);
+}
+
+.signal:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.neighbors {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+}
+
+.neighbor,
+.neighbor-empty {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.neighbor strong {
+  color: var(--ink);
+  font-family: Palatino, "Palatino Linotype", Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.prose p {
+  font-size: 1.125rem;
+}
+
+.table-wrap {
+  margin-top: 2rem;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.98rem;
+}
+
+caption {
+  caption-side: bottom;
+  padding-top: 0.8rem;
+  color: var(--muted);
+  text-align: left;
+}
+
+th,
+td {
+  padding: 0.7rem 0.8rem 0.7rem 0;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+@media (min-width: 720px) {
+  .neighbors {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .neighbor:last-child {
+    text-align: right;
+    align-items: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  h1,
+  .reading-header h1 {
+    font-size: 2rem;
+  }
+
+  .poem {
+    font-size: 1.08rem;
+  }
+}

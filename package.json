@@ -1,0 +1,14 @@
+{
+  "name": "poesia-byron",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "db:setup": "node --env-file=.env db/setup.js",
+    "start": "node --env-file=.env server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
+  }
+}
